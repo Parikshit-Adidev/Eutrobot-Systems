@@ -21,7 +21,7 @@ st.markdown("""
     }
     
     .stApp {
-        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        background: #ffffff;
         font-family: 'Inter', sans-serif;
     }
     
@@ -58,7 +58,7 @@ st.markdown("""
     
     .hero-subtitle {
         font-size: 1.5rem;
-        color: #b0b0b0;
+        color: #666666;
         font-weight: 300;
         margin-bottom: 2rem;
         animation: fadeInUp 1.2s ease-out;
@@ -67,14 +67,14 @@ st.markdown("""
     .main-idea {
         max-width: 800px;
         font-size: 1.2rem;
-        color: #d0d0d0;
+        color: #333333;
         line-height: 1.8;
         animation: fadeInUp 1.4s ease-out;
         padding: 2rem;
-        background: rgba(255, 255, 255, 0.03);
+        background: rgba(102, 126, 234, 0.05);
         border-radius: 20px;
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(102, 126, 234, 0.2);
     }
     
     /* Prototype Cards */
@@ -89,7 +89,7 @@ st.markdown("""
     .section-title {
         font-size: 3rem;
         font-weight: 600;
-        color: #ffffff;
+        color: #1a1a1a;
         margin-bottom: 3rem;
         text-align: center;
         animation: fadeIn 1s ease-out;
@@ -105,12 +105,12 @@ st.markdown("""
     }
     
     .prototype-card {
-        background: rgba(255, 255, 255, 0.05);
+        background: #ffffff;
         border-radius: 20px;
         padding: 2rem;
         cursor: pointer;
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(102, 126, 234, 0.2);
         backdrop-filter: blur(10px);
         position: relative;
         overflow: hidden;
@@ -118,6 +118,7 @@ st.markdown("""
         transform-style: preserve-3d;
         perspective: 1000px;
         margin-bottom: 1rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     }
     
     .prototype-card::before {
@@ -135,8 +136,8 @@ st.markdown("""
     
     .prototype-card:hover {
         transform: translateY(-15px) rotateX(8deg) rotateY(-8deg) scale(1.02);
-        box-shadow: 0 25px 50px rgba(102, 126, 234, 0.4);
-        border-color: rgba(102, 126, 234, 0.6);
+        box-shadow: 0 25px 50px rgba(102, 126, 234, 0.3);
+        border-color: rgba(102, 126, 234, 0.5);
     }
     
     .prototype-card:hover::before {
@@ -149,14 +150,14 @@ st.markdown("""
     }
     
     .prototype-card.coming-soon {
-        opacity: 0.7;
+        opacity: 0.9;
         position: relative;
     }
     
     .prototype-name {
         font-size: 2rem;
         font-weight: 600;
-        color: #ffffff;
+        color: #1a1a1a;
         margin-bottom: 1rem;
         position: relative;
         z-index: 1;
@@ -164,7 +165,7 @@ st.markdown("""
     
     .prototype-description {
         font-size: 1rem;
-        color: #b0b0b0;
+        color: #666666;
         line-height: 1.6;
         position: relative;
         z-index: 1;
@@ -202,14 +203,15 @@ st.markdown("""
     }
     
     .team-card {
-        background: rgba(255, 255, 255, 0.05);
+        background: #ffffff;
         border-radius: 20px;
         padding: 2rem;
         text-align: center;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(102, 126, 234, 0.2);
         backdrop-filter: blur(10px);
         transition: all 0.4s ease;
         animation: fadeInUp 0.6s ease-out;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     }
     
     .team-card:hover {
@@ -220,13 +222,13 @@ st.markdown("""
     .team-name {
         font-size: 1.5rem;
         font-weight: 600;
-        color: #ffffff;
+        color: #1a1a1a;
         margin-bottom: 0.5rem;
     }
     
     .team-role {
         font-size: 1rem;
-        color: #b0b0b0;
+        color: #666666;
     }
     
     /* Media Section */
@@ -270,10 +272,10 @@ st.markdown("""
     .contact-info {
         max-width: 600px;
         padding: 2rem;
-        background: rgba(255, 255, 255, 0.05);
+        background: rgba(102, 126, 234, 0.05);
         border-radius: 20px;
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(102, 126, 234, 0.2);
         animation: fadeInUp 1s ease-out;
     }
     
@@ -478,9 +480,9 @@ def render_homepage():
                 <p style="margin-top: 1rem; color: #667eea; font-weight: 600;">
                     Contact us to learn more and help support by funding us
                 </p>
-            <p style="margin-top: 0.5rem; color: #ffffff;">
-                Email: """ + CONTACT_EMAIL + """
-            </p>
+                <p style="margin-top: 0.5rem; color: #1a1a1a;">
+                    Email: """ + CONTACT_EMAIL + """
+                </p>
             </div>
         </div>
     </div>
@@ -525,11 +527,11 @@ def render_homepage():
     <div class="contact-section">
         <h2 class="section-title">Contact Us</h2>
         <div class="contact-info">
-            <p style="color: #b0b0b0; font-size: 1.1rem; margin-bottom: 1rem;">Get in touch with us</p>
+            <p style="color: #666666; font-size: 1.1rem; margin-bottom: 1rem;">Get in touch with us</p>
             <div class="contact-email">
                 <a href="mailto:""" + CONTACT_EMAIL + """" style="color: #667eea; text-decoration: none;">""" + CONTACT_EMAIL + """</a>
             </div>
-            <p style="color: #b0b0b0; font-size: 0.9rem; margin-top: 1.5rem;">We'd love to hear from you!</p>
+            <p style="color: #666666; font-size: 0.9rem; margin-top: 1.5rem;">We'd love to hear from you!</p>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -538,12 +540,6 @@ def render_prototype_detail():
     prototype = st.session_state.selected_prototype
     details = prototype_details.get(prototype, {})
     
-    st.markdown(f"""
-    <div style="padding: 2rem; max-width: 1000px; margin: 0 auto;">
-        <button onclick="window.history.back()" style="background: rgba(255,255,255,0.1); color: white; border: none; padding: 0.5rem 1rem; border-radius: 10px; cursor: pointer; margin-bottom: 2rem;">← Back</button>
-    </div>
-    """, unsafe_allow_html=True)
-    
     if st.button("← Back to Home", key="back_home"):
         st.session_state.current_page = 'home'
         st.session_state.selected_prototype = None
@@ -551,29 +547,29 @@ def render_prototype_detail():
     
     st.markdown(f"""
     <div style="text-align: center; padding: 2rem;">
-        <h1 style="font-size: 3rem; color: #ffffff; margin-bottom: 1rem;">{details.get('image', '🤖')} {prototype}</h1>
-        <p style="font-size: 1.3rem; color: #b0b0b0; max-width: 800px; margin: 0 auto 2rem;">{details.get('description', '')}</p>
+        <h1 style="font-size: 3rem; color: #1a1a1a; margin-bottom: 1rem;">{details.get('image', '🤖')} {prototype}</h1>
+        <p style="font-size: 1.3rem; color: #666666; max-width: 800px; margin: 0 auto 2rem;">{details.get('description', '')}</p>
     </div>
     """, unsafe_allow_html=True)
     
     if details.get('coming_soon'):
         st.markdown(f"""
-        <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 20px; max-width: 800px; margin: 2rem auto; text-align: center;">
+        <div style="background: rgba(102, 126, 234, 0.05); padding: 2rem; border-radius: 20px; max-width: 800px; margin: 2rem auto; text-align: center; border: 1px solid rgba(102, 126, 234, 0.2);">
             <h2 style="color: #667eea; margin-bottom: 1rem;">Coming Soon</h2>
-            <p style="color: #b0b0b0; margin-bottom: 1rem;">This project is currently in development. Contact us to learn more and support us through funding.</p>
-            <p style="color: #ffffff; font-size: 1.2rem; font-weight: 600;">Email: {details.get('contact_email', CONTACT_EMAIL)}</p>
+            <p style="color: #666666; margin-bottom: 1rem;">This project is currently in development. Contact us to learn more and support us through funding.</p>
+            <p style="color: #1a1a1a; font-size: 1.2rem; font-weight: 600;">Email: {details.get('contact_email', CONTACT_EMAIL)}</p>
         </div>
         """, unsafe_allow_html=True)
     else:
         st.markdown("""
         <div style="max-width: 800px; margin: 2rem auto;">
-            <h2 style="color: #ffffff; margin-bottom: 1rem;">Key Features</h2>
+            <h2 style="color: #1a1a1a; margin-bottom: 1rem;">Key Features</h2>
         """, unsafe_allow_html=True)
         
         for feature in details.get('features', []):
             st.markdown(f"""
-            <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 10px; margin-bottom: 1rem; border-left: 4px solid #667eea;">
-                <p style="color: #ffffff; font-size: 1.1rem;">✓ {feature}</p>
+            <div style="background: rgba(102, 126, 234, 0.05); padding: 1rem; border-radius: 10px; margin-bottom: 1rem; border-left: 4px solid #667eea;">
+                <p style="color: #1a1a1a; font-size: 1.1rem;">✓ {feature}</p>
             </div>
             """, unsafe_allow_html=True)
         
@@ -586,7 +582,7 @@ def render_media_gallery():
     
     st.markdown("""
     <div style="text-align: center; padding: 2rem;">
-        <h1 style="font-size: 3rem; color: #ffffff; margin-bottom: 2rem;">Media Gallery</h1>
+        <h1 style="font-size: 3rem; color: #1a1a1a; margin-bottom: 2rem;">Media Gallery</h1>
     </div>
     """, unsafe_allow_html=True)
     
@@ -604,7 +600,7 @@ def render_media_gallery():
             img_idx = (st.session_state.gallery_index + row * 3 + col_idx) % num_images
             with cols[col_idx]:
                 st.markdown(f"""
-                <div style="background: rgba(255,255,255,0.05); padding: 3rem; border-radius: 20px; margin: 1rem 0; text-align: center; font-size: 4rem; border: 1px solid rgba(255,255,255,0.1); animation: fadeIn 0.5s ease-out; transition: transform 0.3s ease;">
+                <div style="background: rgba(102, 126, 234, 0.05); padding: 3rem; border-radius: 20px; margin: 1rem 0; text-align: center; font-size: 4rem; border: 1px solid rgba(102, 126, 234, 0.2); animation: fadeIn 0.5s ease-out; transition: transform 0.3s ease;">
                     {media_images[img_idx]}
                 </div>
                 """, unsafe_allow_html=True)
